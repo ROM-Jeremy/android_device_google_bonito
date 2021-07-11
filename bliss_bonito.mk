@@ -2,16 +2,19 @@
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Bliss stuff.
+$(call inherit-product, vendor/bliss/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/google/bonito/aosp_bonito.mk)
 
 -include device/google/bonito/device-lineage.mk
 
+# Bootanimation
+TARGET_BOOT_ANIMATION_RES := 1080
+
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_bonito
+PRODUCT_NAME := bliss_bonito
 PRODUCT_MODEL := Pixel 3a XL
 PRODUCT_BRAND := google
 
